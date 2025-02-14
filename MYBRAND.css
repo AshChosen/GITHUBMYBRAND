@@ -1,0 +1,125 @@
+/* Import the Designer font */
+@font-face {
+    font-family: 'Designer';
+    src: url('fonts/Designer.otf') format('opentype');
+}
+
+/* Set the background color of the body to black */
+body {
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the navigation bar */
+/* Style for the navigation bar */
+/* Style for the navigation bar */
+nav {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    width: 90%; /* Set the width to 90% */
+    position: fixed;
+    top: 10px; /* Adjust to move it slightly downward */
+    left: 50%; /* Position it from the center horizontally */
+    transform: translateX(-50%); /* Center it exactly */
+    z-index: 1000;
+    border-radius: 12px;
+}
+
+
+
+/* Style for the navigation links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Designer', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* Full-screen grid layout with 3 columns */
+.centered-layout {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Left, Center, Right */
+    align-items: center;
+    justify-items: center;
+    height: 100vh; /* Full screen height */
+    margin-top: -250px;
+}
+
+/* Style for left and right content (text beside image) */
+.left-content, .right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically in its container */
+    align-items: center; /* Center text horizontally within its container */
+    max-width: 300px; /* Adjust width for readability */
+}
+
+/* Align left content to the start */
+.left-content {
+    justify-self: start;
+    text-align: center; /* Center text horizontally */
+    padding-left: 20px;
+}
+
+/* Align right content to the end */
+.right-content {
+    justify-self: end;
+    text-align: center; /* Center text horizontally */
+    padding-right: 20px;
+}
+
+/* Center image */
+.centered-layout-img {
+    max-width: 650px; /* Adjust image size */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1));
+    pointer-events: none;
+    border-radius: 25px; /* Add border radius */
+}
+
+.MAIN-HEADER {
+    font-family: 'Designer', sans-serif;
+    font-size: 2em;
+    margin: 20px 0 0 0; /* Add top margin to bring the header down */
+    text-align: center; /* Center the text horizontally */
+}
+
+.white-hr {
+    border: 3px solid #FFFFFF; /* Set the border color to white */
+    width: 78%; /* Make the hr tag stretch across the screen */
+    margin: 10 px 0 auto; /* Remove default margins */
+    margin-top: -165px;
+}
